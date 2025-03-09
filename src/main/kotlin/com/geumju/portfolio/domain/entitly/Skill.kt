@@ -25,4 +25,3 @@ class Skill(
     // is_active 알아서 매핑해줌
     var isActive: Boolean = isActive
 }
-}
