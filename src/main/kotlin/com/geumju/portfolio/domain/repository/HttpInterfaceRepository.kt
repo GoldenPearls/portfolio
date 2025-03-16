@@ -5,4 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository
 
 
 interface HttpInterfaceRepository:JpaRepository<HttpInterface, Long>{
+    fun countAllByCreatedDateTimeBetween(startDateTime: String, endDateTime: String): Long
 }
