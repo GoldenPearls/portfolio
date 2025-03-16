@@ -5,7 +5,7 @@ import jakarta.persistence.*
 @Entity
 class ProjectDetail(
         content : String, // 내용
-        url: String, // 링크
+        url: String?, // 링크
         isActive  : Boolean // 활성화 여부
 ) : BaseEntity(){  // BaseEntity 상속
 
@@ -16,7 +16,7 @@ class ProjectDetail(
 
     var content: String = content
 
-    var url: String = url
+    var url: String = url ?: ""
 
     var isActive: Boolean = isActive
 

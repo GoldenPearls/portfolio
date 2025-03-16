@@ -5,7 +5,7 @@ import jakarta.persistence.*
 @Entity
 class ProjectSkill(
         project: Project,
-        Skill: Skill
+        skill: Skill
 ) : BaseEntity(){  // BaseEntity 상속
 
     @Id // PK
@@ -19,5 +19,5 @@ class ProjectSkill(
 
     @ManyToOne(targetEntity = Skill::class, fetch = FetchType.LAZY)
     @JoinColumn(name = "skill_id", nullable = false)
-    var skill: Skill = Skill
+    var skill: Skill = skill
 }
